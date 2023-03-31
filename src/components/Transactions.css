@@ -1,0 +1,24 @@
+table{
+    border-collapse: collapse;
+}
+
+tr:nth-child(2n){
+    background-color: #fff;
+}
+
+tr td:not(:last-child){
+    border-right: solid 1px #e8e8e8;
+}
+
+thead tr{
+    background-color: #00bcd5;
+}
+
+thead th:not(:last-child){
+    border-right: 1px solid #7df0f3;
+}
+
+table td{
+    padding: 2px 5px;
+}
+
