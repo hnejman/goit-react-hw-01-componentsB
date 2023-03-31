@@ -1,7 +1,6 @@
-import css from "./Transactions.module.css";
+import "./Transactions.module.css";
 
 const Fill = ({ items }) => {
-  console.log(css);
   return items.map((item) => (
     <tr>
       <td>{item.type}</td>

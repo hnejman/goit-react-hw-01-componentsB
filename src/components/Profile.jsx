@@ -1,7 +1,6 @@
-import css from '../components/Profile.module.css'
+import '../components/Profile.module.css'
 
 export const Profile = ({username, tag, location, avatar, stats}) => {
-  console.log(css);
       return(
         <div class="profile">
         <div class="description">

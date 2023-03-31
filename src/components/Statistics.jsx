@@ -1,7 +1,6 @@
- import css from '../components/Statistics.module.css';
+ import '../components/Statistics.module.css';
 
 const DataList = ({ data }) => {
-    console.log(css);
     return(
     <ul class="stat-list">
     {data.map(element => (
