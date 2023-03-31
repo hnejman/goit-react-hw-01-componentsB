@@ -1,4 +1,4 @@
-import css from '../components/Statistics.css';
+// import css from '../components/Statistics.css';
 
 const DataList = ({ data }) => {
     return(
