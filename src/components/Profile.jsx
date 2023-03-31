@@ -1,6 +1,8 @@
-import css from '../components/Profile.css'
+import css from '../components/Profile.module.css'
 
-export const Profile = ({username, tag, location, avatar, stats}) => (
+export const Profile = ({username, tag, location, avatar, stats}) => {
+  console.log(css);
+      return(
         <div class="profile">
         <div class="description">
           <img
@@ -28,4 +30,4 @@ export const Profile = ({username, tag, location, avatar, stats}) => (
             </li>
         </ul>
         </div>
-    );
+)};
