@@ -1,4 +1,4 @@
-import "./Transactions.module.css";
+import "./Transactions.css";
 
 const Fill = ({ items }) => {
   return items.map((item) => (
@@ -12,7 +12,7 @@ const Fill = ({ items }) => {
 
 export const TransactionHistory = ({ items }) => {
   return (
-    <table class="ransaction-history">
+    <table className="ransaction-history">
       <thead>
         <tr>
           <th>Type</th>

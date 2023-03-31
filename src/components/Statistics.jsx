@@ -1,16 +1,16 @@
- import './Statistics.module.css';
+ import './Statistics.css';
 
 const DataList = ({ data }) => {
     return(
-    <ul class="stat-list">
+    <ul className="stat-list">
     {data.map(element => (
-        <li key={element.id} class="item" style={{
+        <li key={element.id} className="item" style={{
             backgroundColor: '#' + Math.random().toString().slice(3,9)
         }}>
-             <span class="label">
+             <span className="label">
                 {element.label}
             </span>
-            <span class="percentage">
+            <span className="percentage">
                 {element.percentage}%
             </span> 
         </li>

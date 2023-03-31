@@ -1,14 +1,14 @@
-import './FriendList.module.css'
+import './FriendList.css';
 
 export const FriendList = ({ friends }) => {
     return(
-    <ul class="frends-list-list">
+    <ul className="frends-list">
     {friends.map(friend => (
-      <li class="friend">
-            {friend.isOnline && (<div class="status-on"></div>)}
-            {!friend.isOnline  && (<div class="status-off"></div>)}
-        <img class="avatar" src={friend.avatar} alt="User avatar" width="48" />
-        <p class="name">{friend.name}</p>
+      <li className='friend'>
+            {friend.isOnline && (<div className="status-on"></div>)}
+            {!friend.isOnline  && (<div className="status-off"></div>)}
+        <img className="avatar" src={friend.avatar} alt="User avatar" width="48" />
+        <p className="name">{friend.name}</p>
       </li>
     ))}
     </ul>)
