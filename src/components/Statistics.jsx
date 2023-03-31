@@ -1,4 +1,4 @@
- import '../components/Statistics.module.css';
+ import './Statistics.module.css';
 
 const DataList = ({ data }) => {
     return(

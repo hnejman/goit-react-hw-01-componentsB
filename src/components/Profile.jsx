@@ -1,4 +1,4 @@
-import '../components/Profile.module.css'
+import './Profile.module.css'
 
 export const Profile = ({username, tag, location, avatar, stats}) => {
       return(
