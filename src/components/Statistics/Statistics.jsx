@@ -1,4 +1,4 @@
- import './Statistics.css';
+import styles from './Statistics.module.css';
 
 const DataList = ({ data }) => {
     return(

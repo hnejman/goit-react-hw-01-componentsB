@@ -1,4 +1,4 @@
-import "./Transactions.css";
+import styles from "./Transactions.module.css";
 
 const Fill = ({ items }) => {
   return items.map((item) => (

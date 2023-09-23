@@ -1,16 +1,17 @@
-import { Profile } from 'components/Profile.jsx';
+import { Profile } from 'components/Profile/Profile.jsx';
 import user from '../data/user.json';
-import {Statistics} from 'components/Statistics.jsx';
+import {Statistics} from 'components/Statistics/Statistics.jsx';
 import data from '../data/data.json';
-import {FriendList} from 'components/FriendList.jsx';
+import {FriendList} from 'components/FriendList/FriendList.jsx';
 import friends from '../data/friends.json';
-import {TransactionHistory} from 'components/Transactions.jsx'
+import {TransactionHistory} from 'components/Transactions/Transactions.jsx'
 import transactions from '../data/transactions.json';
 
 export const App = () => {
   return (
     <div>
       <Profile
+      user={user}
         username={user.username}
         tag={user.tag}
         location={user.location}
