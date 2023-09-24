@@ -3,12 +3,12 @@
     width: min-content;
 }
 
-h2{
+.title{
     display: flex;
     justify-content: center;
 }
 
-.stat-list{
+.statList{
     display: flex;
     padding: 0 40px;
 }

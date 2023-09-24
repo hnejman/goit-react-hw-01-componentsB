@@ -1,4 +1,4 @@
-.frends-list{
+.frendsList{
     display: flex;
     flex-direction: column;
 }
@@ -14,7 +14,7 @@
     width: 300px
 }
 
-.status-on{
+.statusOn{
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -22,7 +22,7 @@
     margin: 0 10px;
 }
 
-.status-off{
+.statusOff{
     width: 10px;
     height: 10px;
     border-radius: 50%;

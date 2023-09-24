@@ -4,30 +4,30 @@ import PropTypes from 'prop-types';
 
 export class Profile extends Component {
   render(){
-      return <div className="profile">
-        <div className="description">
+      return <div className={styles.profile}>
+        <div className={styles.description}>
           <img
             src={this.props.user.avatar}
             alt="User avatar"
-            className="avatar"
+            className={styles.avatar}
           />
-          <p className="name">{this.props.user.username}</p>
-          <p className="tag">@{this.props.user.tag}</p>
-          <p className="location">{this.props.user.location}</p>
+          <p className={styles.name}>{this.props.user.username}</p>
+          <p className={styles.tag}>@{this.props.user.tag}</p>
+          <p className={styles.location}>{this.props.user.location}</p>
         </div>
       
-        <ul className="stats">
+        <ul className={styles.stats}>
           <li key={"Followers"} >
-            <span className="label">Followers</span>
-            <span className="quantity">{this.props.user.stats.followers}</span>
+            <span className={styles.label}>Followers</span>
+            <span className={styles.quantity}>{this.props.user.stats.followers}</span>
           </li>
           <li key={"Views"} >
-            <span className="label">Views</span>
-            <span className="quantity">{this.props.user.stats.views}</span>
+            <span className={styles.label}>Views</span>
+            <span className={styles.quantity}>{this.props.user.stats.views}</span>
           </li>
           <li key={"Likes"} >
-            <span className="label">Likes</span>
-            <span className="quantity">{this.props.user.stats.likes}</span>
+            <span className={styles.label}>Likes</span>
+            <span className={styles.quantity}>{this.props.user.stats.likes}</span>
             </li>
         </ul>
         </div>
@@ -35,19 +35,15 @@ export class Profile extends Component {
 };
 
 Profile.propTypes={
-  user: PropTypes.arrayOf(
-    PropTypes.shape({
-      avatar: PropTypes.string,
-      username: PropTypes.string,
-      tag: PropTypes.string,
-      location: PropTypes.string,
-      stats: PropTypes.arrayOf( 
-        PropTypes.shape({
-          followers: PropTypes.string,
-          views: PropTypes.string,
-          likes: PropTypes.string
-        })
-      )
+  user: PropTypes.shape({
+    avatar: PropTypes.string.isRequired,
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    stats: PropTypes.shape({
+      followers: PropTypes.number.isRequired,
+      views: PropTypes.number.isRequired,
+      likes: PropTypes.number.isRequired
     })
-  )
+  })
 }

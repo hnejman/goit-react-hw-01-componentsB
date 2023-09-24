@@ -1,8 +1,9 @@
 import styles from "./Transactions.module.css";
+import PropTypes from 'prop-types';
 
 const Fill = ({ items }) => {
   return items.map((item) => (
-    <tr>
+    <tr key={item.id}>
       <td>{item.type}</td>
       <td>{item.amount}</td>
       <td>{item.currency}</td>
@@ -10,9 +11,20 @@ const Fill = ({ items }) => {
   ));
 };
 
+Fill.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired
+    })
+  )
+}
+
 export const TransactionHistory = ({ items }) => {
   return (
-    <table className="ransaction-history">
+    <table className={styles.transactionHistory}>
       <thead>
         <tr>
           <th>Type</th>
@@ -20,7 +32,13 @@ export const TransactionHistory = ({ items }) => {
           <th>Currency</th>
         </tr>
       </thead>
-      <Fill items={items}></Fill>
+      <tbody>
+        <Fill items={items}></Fill>
+      </tbody>
     </table>
   );
 };
+
+TransactionHistory.propTypes = {
+  items: PropTypes.array.isRequired
+}

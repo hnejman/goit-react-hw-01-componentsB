@@ -1,16 +1,17 @@
 import styles from './Statistics.module.css';
+import PropTypes from 'prop-types';
 
 const DataList = ({ data }) => {
     return(
-    <ul className="stat-list">
+    <ul className={styles.statList}>
     {data.map(element => (
-        <li key={element.id} className="item" style={{
+        <li key={element.id} className={styles.item} style={{
             backgroundColor: '#' + Math.random().toString().slice(3,9)
         }}>
-             <span className="label">
+             <span className={styles.label}>
                 {element.label}
             </span>
-            <span className="percentage">
+            <span className={styles.percentage}>
                 {element.percentage}%
             </span> 
         </li>
@@ -18,9 +19,30 @@ const DataList = ({ data }) => {
     </ul>)
 }
 
+DataList.propTypes = {
+    data:PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            label: PropTypes.string.isRequired,
+            percentage: PropTypes.number.isRequired
+        })
+    )
+}
+
 export const Statistics = ({ title, stats }) => (
-    <section className='statistics'>
-        {{ title } && (<h2>{title}</h2>)}
+    <section className={styles.statistics}>
+        {{ title } && (<h2 className={styles.title}>{title}</h2>)}
         <DataList data={stats}/>
     </section>
 );
+
+Statistics.propTypes = {
+    title:PropTypes.string.isRequired,
+    data:PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            label: PropTypes.string.isRequired,
+            percentage: PropTypes.number.isRequired
+        })
+    )
+}
